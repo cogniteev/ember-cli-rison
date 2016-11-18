@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-rison",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "rison serialization helpers for Ember.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -41,7 +41,8 @@
     "loader.js": "^4.0.10"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "rison"
   ],
   "dependencies": {
     "ember-cli-babel": "^5.1.7"
