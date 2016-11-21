@@ -6,6 +6,12 @@ When the addon is installed, it will add rison as a bower dependency.
 
 ## Usage
 
+### Helpers
+
+```hbs
+{{rison-encode value}} {{!-- encode value in RISON --}}
+{{rison-decode value}} {{!-- decode RISON value --}}
+```
 
 ### ES6 Rison
 
