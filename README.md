@@ -6,6 +6,19 @@ When the addon is installed, it will add rison as a bower dependency.
 
 ## Usage
 
+### Computed Property Macros
+
+Ships with the following computed property macros: `risonEncode`, `risonDecode`.
+
+```javascript
+import Ember from 'ember';
+import risonEncode from 'ember-cli-rison/computeds/rison-encode';
+
+export default Ember.Component.extend({
+  encoded: risonEncode('value')
+});
+```
+
 ### Helpers
 
 ```hbs
