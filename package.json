@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-rison",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Rison template helpers and computed property macros for an Ember CLI application.",
   "directories": {
     "doc": "doc",
