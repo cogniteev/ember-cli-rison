@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-rison",
   "version": "0.0.2",
-  "description": "rison serialization helpers for Ember.",
+  "description": "Rison template helpers and computed property macros for an Ember CLI application.",
   "directories": {
     "doc": "doc",
     "test": "tests"
