@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-rison",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "rison serialization helpers for Ember.",
   "directories": {
     "doc": "doc",
