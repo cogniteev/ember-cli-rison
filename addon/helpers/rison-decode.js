@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import rison from 'rison';
 
+const { typeOf, Helper } = Ember;
+
 export function risonDecode(value) {
   // cannot decode falsy or empty value
   if (!value || value === '') {
@@ -8,7 +10,7 @@ export function risonDecode(value) {
   }
 
   // enforce string value
-  if (Ember.typeOf(value) !== 'string') {
+  if (typeOf(value) !== 'string') {
     value = String(value);
   }
 
@@ -32,6 +34,6 @@ export function safeRisonDecode(value) {
   }
 }
 
-export default Ember.Helper.helper(function([ value ]) {
+export default Helper.helper(function([ value ]) {
   return safeRisonDecode(value);
 });
