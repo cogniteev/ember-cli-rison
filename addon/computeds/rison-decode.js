@@ -5,6 +5,6 @@ const { computed } = Ember;
 
 export default function(dependentKey) {
   return computed(dependentKey, function() {
-    return safeRisonDecode(( this.get(dependentKey) ));
+    return safeRisonDecode( this.get(dependentKey) );
   });
 }

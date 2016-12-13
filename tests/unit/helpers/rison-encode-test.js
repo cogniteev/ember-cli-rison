@@ -23,8 +23,8 @@ test('it encode an empty object', function(assert) {
   assert.equal(risonEncode({}), '()');
 });
 
-test('it return an empty string if undefined', function(assert) {
-  assert.equal(risonEncode(), '');
+test('it return null if undefined', function(assert) {
+  assert.equal(risonEncode(), null);
 });
 
 test('it omit an undefined value', function(assert) {

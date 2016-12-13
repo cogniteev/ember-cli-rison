@@ -9,7 +9,7 @@ test('it encode rison value', function(assert) {
     encoded: risonEncode('value')
   }).create({ value: undefined });
 
-  assert.equal(subject.get('encoded'), '', 'no value set');
+  assert.equal(subject.get('encoded'), null, 'no value set');
 
   subject.set('value', {
     a: 'test',

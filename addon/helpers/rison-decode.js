@@ -30,7 +30,7 @@ export function safeRisonDecode(value) {
   try {
     return risonDecode(value);
   } catch (e) {
-    return '';
+    return null;
   }
 }
 

@@ -71,7 +71,7 @@ test('it throw exception for invalid expressions', function(assert) {
 
 test('safe version does not throw exception', function(assert) {
   try {
-    assert.equal(safeRisonDecode('('), '');
+    assert.equal(safeRisonDecode('('), null);
   } catch (e) {
     assert.ok(false, 'exception should not be thrown');
   }
