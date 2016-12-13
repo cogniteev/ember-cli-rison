@@ -1,7 +1,7 @@
 import Ember from 'ember';
 import rison from 'rison';
 
-export function risonDecode([ value ]) {
+export function risonDecode(value) {
   // cannot decode falsy or empty value
   if (!value || value === '') {
     return value;
@@ -24,12 +24,14 @@ export function risonDecode([ value ]) {
   }
 }
 
-export function safeRisonDecode() {
+export function safeRisonDecode(value) {
   try {
-    return risonDecode(...arguments);
+    return risonDecode(value);
   } catch (e) {
     return '';
   }
 }
 
-export default Ember.Helper.helper(safeRisonDecode);
+export default Ember.Helper.helper(function([ value ]) {
+  return safeRisonDecode(value);
+});

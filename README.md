@@ -19,19 +19,39 @@ export default Ember.Component.extend({
 });
 ```
 
-### Helpers
+### Handlebars Helpers
 
 ```hbs
 {{rison-encode value}} {{!-- encode value in RISON --}}
 {{rison-decode value}} {{!-- decode RISON value --}}
 ```
 
+### Helpers in components
+import { risonEncode } 
+
+
 ### ES6 Rison
 
 This addon provides the ability to import rison as an ES6 module.
 
-```js
-import rison from 'rison';
+```javascript
+import Ember from 'ember';
+import { risonEncode } from 'ember-cli-rison/helpers/rison-encode';
+import { risonDecode, safeRisonDecode } from 'ember-cli-rison/helpers/rison-decode';
+
+export default Ember.Component.extend({
+
+  didReceiveAttrs() {
+    this._super(...arguments);
+    this.set('decoded', safeRisonDecode(this.get('encoded')));
+  },
+
+  actions: {
+    update(value) {
+      this.attrs.update(risonEncode(value));
+    }
+  }
+});
 ```
 
 ## Installation

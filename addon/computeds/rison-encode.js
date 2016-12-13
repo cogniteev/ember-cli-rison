@@ -3,6 +3,6 @@ import { risonEncode } from 'ember-cli-rison/helpers/rison-encode';
 
 export default function(dependentKey) {
   return Ember.computed(dependentKey, function() {
-    return risonEncode(([ this.get(dependentKey) ]));
+    return risonEncode(( this.get(dependentKey) ));
   });
 }
