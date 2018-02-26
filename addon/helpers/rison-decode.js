@@ -1,7 +1,6 @@
-import Ember from 'ember';
+import { typeOf } from '@ember/utils';
+import Helper from '@ember/component/helper';
 import rison from 'rison';
-
-const { typeOf, Helper } = Ember;
 
 export function risonDecode(value) {
   // cannot decode falsy or empty value

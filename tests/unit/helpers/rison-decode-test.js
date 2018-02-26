@@ -59,13 +59,13 @@ test('it throw exception for invalid expressions', function(assert) {
   try {
     risonDecode('(');
   } catch (e) {
-    assert.equal(e.message, 'rison decoded error: Maximum call stack size exceeded.');
+    assert.equal(e.message, 'rison decoded error: Maximum call stack size exceeded');
   }
 
   try {
     risonDecode('(test:');
   } catch (e) {
-    assert.equal(e.message, 'rison decoded error: null is not an object (evaluating \'m.length\')');
+    assert.equal(e.message, 'rison decoded error: Cannot read property \'length\' of null');
   }
 });
 

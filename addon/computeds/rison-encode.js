@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import { computed } from '@ember/object';
 import { risonEncode } from 'ember-cli-rison/helpers/rison-encode';
-
-const { computed } = Ember;
 
 export default function(dependentKey) {
   return computed(dependentKey, function() {

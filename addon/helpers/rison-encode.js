@@ -1,7 +1,5 @@
-import Ember from 'ember';
+import Helper from '@ember/component/helper';
 import rison from 'rison';
-
-const { Helper } = Ember;
 
 export function risonEncode(value) {
   return value === null || value === undefined ? null : rison.encode(value);

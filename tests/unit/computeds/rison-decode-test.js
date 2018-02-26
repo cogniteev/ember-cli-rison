@@ -1,11 +1,11 @@
-import Ember from 'ember';
+import EmberObject from '@ember/object';
 import { module, test } from 'qunit';
 import risonDecode from 'ember-cli-rison/computeds/rison-decode';
 
 module('Unit | Computed | rison decode');
 
 test('it decode rison value', function(assert) {
-  const subject = Ember.Object.extend({
+  const subject = EmberObject.extend({
     decoded: risonDecode('value')
   }).create({ value: undefined });
 

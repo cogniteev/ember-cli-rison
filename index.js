@@ -1,4 +1,3 @@
-/* jshint node: true */
 'use strict';
 
 module.exports = {
@@ -6,7 +5,7 @@ module.exports = {
 
   included(app) {
     this._super.included(app);
-    app.import(app.bowerDirectory + '/rison/js/rison.js', {
+    app.import('node_modules/rison/js/rison.js', {
       type: 'vendor'
     });
     app.import('vendor/rison.shim.js', {
