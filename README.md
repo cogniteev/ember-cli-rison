@@ -2,7 +2,7 @@
 
 Include `rison` in an ember-cli app.
 
-When the addon is installed, it will add rison as a bower dependency.
+This addon uses [Nanonid/rison](https://github.com/Nanonid/rison) as its NPM rison dependency.
 
 ## Usage
 
@@ -11,10 +11,10 @@ When the addon is installed, it will add rison as a bower dependency.
 Ships with the following computed property macros: `risonEncode`, `risonDecode`.
 
 ```javascript
-import Ember from 'ember';
+import Component from '@ember/component';
 import risonEncode from 'ember-cli-rison/computeds/rison-encode';
 
-export default Ember.Component.extend({
+export default Component.extend({
   encoded: risonEncode('value')
 });
 ```
@@ -27,19 +27,13 @@ export default Ember.Component.extend({
 ```
 
 ### Helpers in components
-import { risonEncode } 
-
-
-### ES6 Rison
-
-This addon provides the ability to import rison as an ES6 module.
 
 ```javascript
-import Ember from 'ember';
+import Component from '@ember/component';
 import { risonEncode } from 'ember-cli-rison/helpers/rison-encode';
 import { risonDecode, safeRisonDecode } from 'ember-cli-rison/helpers/rison-decode';
 
-export default Ember.Component.extend({
+export default Component.extend({
 
   didReceiveAttrs() {
     this._super(...arguments);
@@ -48,18 +42,26 @@ export default Ember.Component.extend({
 
   actions: {
     update(value) {
-      this.attrs.update(risonEncode(value));
+      this.get('update')(risonEncode(value));
     }
   }
 });
 ```
+
+### ES6 Rison
+
+This addon provides the ability to import rison as an ES6 module.
+
+```javascript
+import rison from 'rison';
+```
+
 
 ## Installation
 
 * `git clone <repository-url>` this repository
 * `cd ember-cli-rison`
 * `npm install`
-* `bower install`
 
 ## Running
 
