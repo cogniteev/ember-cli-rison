@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.6.0",
-    "rison": "github:Nanonid/rison#e64af6c"
+    "rison-node": "2.1.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
@@ -44,7 +44,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
-    "ember-source": "~3.0.0",
+    "ember-source": "https://s3.amazonaws.com/builds.emberjs.com/release/shas/857a01b5a60b818e2cb0c137ad3014447f4ed88b.tgz",
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.0",

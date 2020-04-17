@@ -5,7 +5,7 @@ module.exports = {
 
   included(app) {
     this._super.included(app);
-    app.import('node_modules/rison/js/rison.js', {
+    app.import('node_modules/rison-node/js/rison.js', {
       type: 'vendor'
     });
     app.import('vendor/rison.shim.js', {

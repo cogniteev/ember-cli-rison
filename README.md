@@ -2,7 +2,7 @@
 
 Include `rison` in an ember-cli app.
 
-This addon uses [Nanonid/rison](https://github.com/Nanonid/rison) as its NPM rison dependency.
+This addon uses [rison-node](https://github.com/w33ble/rison-node) as its NPM rison dependency.
 
 ## Usage
 

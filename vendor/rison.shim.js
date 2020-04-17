@@ -1,7 +1,13 @@
-/* globals rison */
+(function() {
+  function vendorModule() {
+    'use strict';
 
-'use strict';
+    return {
+      'default': self['rison'],
+      __esModule: true,
+    };
+  }
 
-define('rison', [], function() {
-  return { 'default': rison };
-});
+  define('rison', [], vendorModule);
+})();
+
